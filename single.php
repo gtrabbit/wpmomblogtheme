@@ -13,7 +13,8 @@ get_header(); ?>
 	<header class="sparkle-card">
 	<?php
 	while ( have_posts() ) : the_post();
-		if (empty(get_the_title())){
+		$title = get_the_title();
+		if (empty($title)){
 			echo '<div class="sparkle-header-wrapper" ><h2 class="sparkle-entry-title">' . get_the_date() . '</h2></div>';
 		}
 		if ( is_singular() ) :

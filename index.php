@@ -65,7 +65,9 @@ get_header(); ?>
 					?>
 
 				 			</div>
-				 	<?php if (!empty(the_tags())): ?>
+				 	<?php
+				 		$tags = the_tags();
+				 	 if (!empty($tags)): ?>
 				 	<span class="sparkle-tags">
 				 		posted in: <?php the_tags("", ", ") ?>
 				 	</span>
