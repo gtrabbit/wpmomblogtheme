@@ -40,7 +40,10 @@ get_header(); ?>
 				 			</p> 
 				 			
 						</div>
-						<?php if(!empty(get_the_post_thumbnail_url())): ?>
+						<?php $thumb = get_the_post_thumbnail_url();
+
+
+						if(!empty($thumb)): ?>
 							<div class="sparkle-thumbnail-wrapper">
 								<div class="sparkle-thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')">
 							</div>
