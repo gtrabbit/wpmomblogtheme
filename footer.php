@@ -28,12 +28,20 @@
 		</div>
 		<div class="sparkle-flex sparkle-left-border sparkle-flex-column-wrap">
 			<?php $headerLinks = wp_get_nav_menu_items('Menu 1');
+			if($headerLinks):
 				foreach ($headerLinks as $key => $value): ?>
 
 				<a href="<?php echo $value->url; ?>" class="sparkle-footer-menu-item" ><?php echo $value->title; ?></a>
 		
 
-		<?php endforeach; ?>
+				<?php endforeach; 
+			else: ?>
+				<p> Create a menu called 'Menu 1'. The items in that menu will appear here.
+			<?php endif ?>
+
+
+			
+				
 			<a href="<?php echo get_site_url(); ?>/wp-admin" class="sparkle-footer-menu-item">Log in</a>
 		</div>
 	

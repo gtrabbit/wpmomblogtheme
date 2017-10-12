@@ -38,6 +38,8 @@
 	</div>
 	<nav id="nav" class="sparkle-flex-nowrap sparkle-nav-menu" >
 	<?php $headerLinks = wp_get_nav_menu_items('Menu 1');
+		if ($headerLinks):
+
 		foreach ($headerLinks as $key => $value): ?>
 
 			<a href="<?php echo $value->url; ?>" class="sparkle-nav-menu-item sparkle-always-black" ><?php echo $value->title; ?></a>
@@ -45,8 +47,11 @@
 				echo "&#8901;";
 				} ?>
 
-		<?php endforeach; ?>
-
+		<?php endforeach; 
+		 else:
+		?>
+			<p>Please create a menu called 'Menu 1'. Items in that menu will appear here.</p>
+		<?php endif ?>
 
 
 	</nav>
